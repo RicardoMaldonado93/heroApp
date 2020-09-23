@@ -11,7 +11,7 @@ export const HeroesList = ({ publisher }) => {
             {
                 heroes.map( hero =>(
                     <HeroCard key={hero.id} { ...hero } />
-                ) )
+                ))
             }        
         </div>
     )
