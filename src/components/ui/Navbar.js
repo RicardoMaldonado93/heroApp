@@ -8,14 +8,12 @@ export const Navbar = () => {
     const { user:{ name }, dispatch } = useContext( AuthContext );
     const history = useHistory();
 
-    console.log(history)
-
     const handleLogout = ()=>{
         dispatch({
             type: types.logout
         });
 
-        history.replace("/login")
+        history.replace("/login");
     }
 
     return (

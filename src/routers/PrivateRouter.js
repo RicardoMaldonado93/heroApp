@@ -8,6 +8,9 @@ export const PrivateRouter = ({
     ...rest
 }) => {
 
+    const URL = rest.location.search ? rest.location.pathname + rest.location.search : rest.location.pathname;
+    localStorage.setItem("lastPath", URL );
+
     return (
         <Route 
             { ...rest } 
