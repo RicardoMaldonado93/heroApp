@@ -10,7 +10,7 @@ export const SearchScreen = ({ history }) => {
     const location = useLocation();
     const { q = '' } = queryString.parse(location.search); 
 
-    const [ values, handleInputChange, reset ] = useForm({ searchText: q });
+    const [ values, handleInputChange ] = useForm({ searchText: q });
     
     const { searchText } = values;
     
@@ -69,7 +69,7 @@ export const SearchScreen = ({ history }) => {
                     }
                     {
                         heroesFiltered.map( hero =>(
-                            <div className="animate__animated animate__fadeIn">
+                            <div className="animate__animated animate__fadeIn" key={hero.id}>
                                 <HeroCard 
                                     
                                     key={hero.id}
