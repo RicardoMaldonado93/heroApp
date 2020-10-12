@@ -40,13 +40,13 @@ describe("Test in '<PrivateRouter />'", () => {
         expect( localStorage.setItem ).toHaveBeenCalledWith( "lastPath", "/marvel" )
     });
 
-    test("should be block th component if isn't authenticated", () => {
+    test("should be block the component if isn't authenticated", () => {
         
         const wrapper = mount(
             <MemoryRouter>
                 <PrivateRouter 
                     isAuthenticated = { false }
-                    component = { () => <span> Prueba de componente renderizado si esta logueado </span> }
+                    component = { () => <span> Prueba de componente renderizado si no esta logueado </span> }
                     { ...props }
                 />
             </MemoryRouter>
