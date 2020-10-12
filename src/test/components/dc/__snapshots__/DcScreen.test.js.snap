@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Unitary test for <DcScreen /> should be match with snapshot 1`] = `
+<div>
+  <h1>
+    DC SCREEN
+  </h1>
+  <hr />
+  <HeroesList
+    publisher="DC Comics"
+  />
+</div>
+`;
