@@ -1,18 +1,20 @@
 import { mount } from "enzyme";
 import { MemoryRouter } from "react-router-dom";
 import { PrivateRouter } from "../../routers/PrivateRouter";
+import React from 'react';
+
 
 describe("Test in '<PrivateRouter />'", () => {
    
     const props = {
         location:{
-            pathname: '/marvel'
+            pathname: '/marvel',
         }
     };
 
     Storage.prototype.setItem = jest.fn();
 
-    test('should be shown the component if it is authenticated and save in localStorage', () => {
+    test("should be shown the component if it's authenticated and save in localStorage", () => {
 
         /**
          *  HOC: Hight Order Component
@@ -29,13 +31,29 @@ describe("Test in '<PrivateRouter />'", () => {
                 <PrivateRouter 
                     isAuthenticated = { true }
                     component = { () => <span> Prueba de componente renderizado si esta logueado </span> }
+                    { ...props }
                 />
             </MemoryRouter>
         );
 
-        expect( wrapper.find("span").exist() ).toBeTruthy();
+        expect( wrapper.find("span").exists()).toBeTruthy();
         expect( localStorage.setItem ).toHaveBeenCalledWith( "lastPath", "/marvel" )
     });
 
+    test("should be block th component if isn't authenticated", () => {
+        
+        const wrapper = mount(
+            <MemoryRouter>
+                <PrivateRouter 
+                    isAuthenticated = { false }
+                    component = { () => <span> Prueba de componente renderizado si esta logueado </span> }
+                    { ...props }
+                />
+            </MemoryRouter>
+        );
+
+        expect( !wrapper.find("span").exists()).toBeTruthy();
+    });
+    
     
 });
