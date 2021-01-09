@@ -69,5 +69,17 @@ describe('test with <HeroScreen />', () => {
         expect( historyMock.goBack ).toHaveBeenCalled();
     });
     
+    test('should be call to redirect if isn´t Hero', () => {
+        const wrapper = mount(
+            <MemoryRouter initialEntries={['/hero/marvel-spidera']}>
+                <Route  
+                    path="/hero/:heroeID" 
+                    component={ ()=> <HeroScreen history={ historyMock }/> } 
+                />
+            </MemoryRouter>
+        );
+
+        expect( wrapper.text() ).toBe('');
+    })
     
 });
