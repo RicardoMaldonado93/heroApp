@@ -34,5 +34,11 @@ describe("test with <DashboardRoutes />", () => {
     test("should be contain at least one card or more", () => {
         expect( wrapper.find(".card-columns").find(".card").length >= 1 ).toBeTruthy();
     });
-    
+
+    test("if alter ego and character are equals, not show characters ", () => {
+        const card = wrapper.find(".card-body").at(0);
+        
+        expect( card.find("#alter-ego").exists()).toBeTruthy();
+        expect( card.find("#characters").exists()).toBeFalsy();
+    })
 });

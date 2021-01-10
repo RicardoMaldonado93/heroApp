@@ -111,6 +111,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Peter Parker
@@ -172,6 +173,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Steve Rogers
@@ -233,6 +235,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Tony Stark
@@ -294,6 +297,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Thor Odinson
@@ -355,6 +359,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Bruce Banner
@@ -416,6 +421,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   James Howlett
@@ -477,6 +483,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Matthew Michael Murdock
@@ -538,6 +545,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Clinton Francis Barton
@@ -599,6 +607,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Scott Summers
@@ -660,6 +669,7 @@ Array [
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Norrin Radd
