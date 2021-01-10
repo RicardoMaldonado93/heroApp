@@ -19,11 +19,11 @@ export const HeroCard = ({
                 <div className="col-md-8">
                     <div className="card-body">
                         <h5 className="card-title"> { superhero } </h5>
-                        <p className="card-text"> { alter_ego } </p>
+                        <p className="card-text" id="alter-ego"> { alter_ego } </p>
 
                         {
                             ( alter_ego !== characters )
-                        && <p className="card-text"> { characters } </p>
+                        && <p className="card-text" id="characters"> { characters } </p>
                         }
 
                         <p className="card-text">
