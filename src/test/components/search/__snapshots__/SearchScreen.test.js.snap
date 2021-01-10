@@ -145,6 +145,7 @@ exports[`Test for Search Screen should show 'batman' in input, queryString and a
                 </h5>
                 <p
                   className="card-text"
+                  id="alter-ego"
                 >
                    
                   Bruce Wayne
