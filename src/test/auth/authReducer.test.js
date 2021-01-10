@@ -9,6 +9,11 @@ describe('Test in authReducer', () => {
         expect( state ).toEqual( { logged: false } );
     });
 
+    test('should be return default state if action is null', () => {
+        const state = authReducer()
+        expect( state ).toEqual( {} );
+    });
+
     test('should authenticate y set username', () => {
         const action = {
             type: types.login,
