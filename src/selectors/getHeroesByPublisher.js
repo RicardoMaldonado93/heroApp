@@ -1,12 +1,13 @@
 const { heroes } = require("../data/heroes");
 
 
-export const getHeroesByPublisher = ( publisher ) =>{
+export const getHeroesByPublisher = ( publisher = "" ) =>{
 
     const validPublisher = [ "DC Comics", "Marvel Comics" ];
 
+
     if( !validPublisher.includes( publisher ) ){
-        throw new Error(`Publisher ${publisher} no es valido`);
+        return `Publisher not valid`;
     }
 
     return heroes.filter( hero => hero.publisher === publisher );
