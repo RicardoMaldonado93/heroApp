@@ -41,6 +41,6 @@ describe('test with Login Screen', () => {
         localStorage.setItem("lastPath", "/dc");
 
         handleClick();
-        expect( historyMock.replace ).toHaveBeenLastCalledWith("/dac");
+        expect( historyMock.replace ).toHaveBeenLastCalledWith("/dc");
     });
 });
